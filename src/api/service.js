@@ -1,8 +1,10 @@
 
 // In production (e.g. Netlify), use backend URL; fallback for when VITE_API_URL is not set
-const API_BASE =
+const rawBase =
   import.meta.env.VITE_API_URL ||
   (import.meta.env.PROD ? 'https://abdulsalim.pythonanywhere.com' : '');
+
+const API_BASE = rawBase.endsWith('/') ? rawBase.slice(0, -1) : rawBase;
 
 async function request(path, options = {}) {
   const url = path.startsWith('http') ? path : `${API_BASE}${path}`;

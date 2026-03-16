@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': { target: 'https://profelvisasarebediako.onrender.com/', changeOrigin: true },
-      '/media': { target: 'https://profelvisasarebediako.onrender.com/', changeOrigin: true },
+      '/api': { target: 'https://profelvisasarebediako.onrender.com', changeOrigin: true },
+      '/media': { target: 'https://profelvisasarebediako.onrender.com', changeOrigin: true },
     },
   },
 }) 
