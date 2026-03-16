@@ -6,6 +6,7 @@ import GalleryPage from './pages/GalleryPage'
 import ResearchPage from './pages/ResearchPage'
 import PublicationsPage from './pages/PublicationsPage'
 import ProjectsPage from './pages/ProjectsPage'
+import NotFoundPage from './pages/NotFoundPage'
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="research" element={<ResearchPage />} />
             <Route path="publications" element={<PublicationsPage />} />
             <Route path="projects" element={<ProjectsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
